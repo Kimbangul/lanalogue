@@ -1,6 +1,7 @@
 'use client'
 
 import { createGlobalStyle } from 'styled-components';
+import theme from '@/utils/Theme';
 
 const GlobalStyle = createGlobalStyle`
  html{
@@ -30,7 +31,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
     font-size: 1.4rem;
     min-width: 280px;
-    
+    background: ${theme.color.bg};
+    min-height: 100vh;
+    position: relative;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: sans-serif;

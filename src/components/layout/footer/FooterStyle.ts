@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Footer = {
   Container : styled.footer`
     width: 100%;
-    
+    background:${props => props.theme.color.bg};
   `,
   Inner: styled.div`
     max-width: 1200px;

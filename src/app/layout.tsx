@@ -1,6 +1,7 @@
 import GlobalStyle from "@/components/common/GlobalStyle";
-import FooterView from "@/components/layout/footer/FooterView";
 import ClientProvider from "@/components/common/ClientProvider";
+import FooterView from "@/components/layout/footer/FooterView";
+import HeaderView from "@/components/layout/header/HeaderView";
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,6 +17,7 @@ export default function RootLayout({
     <ClientProvider>
     <html lang="en">
       <body>
+        <HeaderView />
         {children}
         <FooterView />
       </body>
