@@ -1,3 +1,6 @@
+import GlobalStyle from "@/components/common/GlobalStyle";
+import FooterView from "@/components/layout/footer/FooterView";
+import ClientProvider from "@/components/common/ClientProvider";
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,8 +13,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClientProvider>
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <FooterView />
+      </body>
     </html>
+    </ClientProvider>
   )
 }
