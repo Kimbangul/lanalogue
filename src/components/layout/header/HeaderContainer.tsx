@@ -1,8 +1,9 @@
 import HeaderView from "@/components/layout/header/HeaderView"
-import menu from '@/components/layout/header/menu.json';
+import menu from '@/components/layout/header/menu';
+import { MenuType } from "./type";
 
 const HeaderContainer = () => {
-  const menuList = Object.entries(menu).map((el) => {
+  const menuList : MenuType[] = Object.entries(menu).map((el) => {
     return {[el[0]]: el[1]}
   });
   

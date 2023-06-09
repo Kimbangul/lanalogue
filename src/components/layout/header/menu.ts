@@ -1,4 +1,6 @@
-{
+import { MenuType } from "@/components/layout/header/type";
+
+const menu : MenuType = {
   "introduce": {
     "link": "#",
     "icon": "music"
@@ -20,3 +22,5 @@
     "icon": "music"
   }
 }
+
+export default menu;
