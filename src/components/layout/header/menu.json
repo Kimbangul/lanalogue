@@ -1,7 +1,22 @@
 {
-  "introduce": "#",
-  "member": "#",
-  "discography": "#",
-  "concert info": "#",
-  "guest": "#"
+  "introduce": {
+    "link": "#",
+    "icon": "music"
+  },
+  "member": {
+    "link": "#",
+    "icon": "music"
+  },
+  "discography":{
+    "link": "#",
+    "icon": "music"
+  },
+  "concert info": {
+    "link": "#",
+    "icon": "music"
+  },
+  "guest": {
+    "link": "#",
+    "icon": "music"
+  }
 }
