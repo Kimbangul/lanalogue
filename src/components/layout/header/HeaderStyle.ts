@@ -7,7 +7,7 @@ const Header = {
     position: fixed;
     top: 0;
     left: 0;
-    background: #111;
+    background: #000;
   `,
   Inner: styled.div`
     width: 100%;

@@ -1,7 +1,7 @@
 import GlobalStyle from "@/components/common/GlobalStyle";
 import ClientProvider from "@/components/common/ClientProvider";
 import FooterView from "@/components/layout/footer/FooterView";
-import HeaderView from "@/components/layout/header/HeaderView";
+import HeaderContainer from "@/components/layout/header/HeaderContainer";
 import WrapperView from "@/components/layout/wrapper/WrapperView";
 
 export const metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({children}: { children: React.ReactNode
     <html lang="en">
       <body>
         <WrapperView>
-        <HeaderView />
+        <HeaderContainer />
         {children}
         <FooterView />
         </WrapperView>
