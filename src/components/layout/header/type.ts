@@ -1,9 +1,9 @@
-import { IconName } from "@fortawesome/fontawesome-svg-core"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
 export interface MenuType {
   [key:string]: {
-    [key:string]: string,
-    icon: IconName
+    link: string,
+    icon: IconDefinition
   }
 }
 

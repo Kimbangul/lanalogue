@@ -1,25 +1,26 @@
 import { MenuType } from "@/components/layout/header/type";
+import { faIcons,faMusic, faCompactDisc, faBook, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
 const menu : MenuType = {
   "introduce": {
     "link": "#",
-    "icon": "music"
+    "icon": faIcons
   },
   "member": {
     "link": "#",
-    "icon": "music"
+    "icon": faPeopleGroup
   },
   "discography":{
     "link": "#",
-    "icon": "music"
+    "icon": faCompactDisc
   },
   "concert info": {
     "link": "#",
-    "icon": "music"
+    "icon": faMusic
   },
-  "guest": {
+  "guestbook": {
     "link": "#",
-    "icon": "music"
+    "icon": faBook
   }
 }
 

@@ -13,7 +13,7 @@ const HeaderView = ({menu}: HeaderViewPropsType) => {
           {menu?.map((el, idx)=> {
             return(
               <Header.Menu.Item key={`menu${idx}`}>
-                <FontAwesomeIcon icon={"music"} />
+                <FontAwesomeIcon icon={Object.values(el)[0].icon} />
                 {Object.keys(el)[0]}
               </Header.Menu.Item>
             )
