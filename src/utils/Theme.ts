@@ -6,6 +6,7 @@ const color = {
   text03: '#444',
   text02: '#555',
   text01: '#666', 
+  point01: '#ff7675',
 }
 
 const fontSize = {

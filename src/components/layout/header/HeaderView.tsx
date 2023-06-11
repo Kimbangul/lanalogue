@@ -1,7 +1,7 @@
 'use client'
 
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid, regular, brands, icon } from "@fortawesome/fontawesome-svg-core/import.macro";
 import Header from "@/components/layout/header/HeaderStyle";
 import { HeaderViewPropsType } from "@/components/layout/header/type";
 
@@ -9,16 +9,20 @@ const HeaderView = ({menu}: HeaderViewPropsType) => {
   return(
     <Header.Container>
       <Header.Inner>
-        <ul>
+        <Header.Menu.List>
           {menu?.map((el, idx)=> {
             return(
               <Header.Menu.Item key={`menu${idx}`}>
-                <FontAwesomeIcon icon={Object.values(el)[0].icon} />
-                {Object.keys(el)[0]}
+               <Link href={Object.values(el)[0].link}>
+                <>
+                  <FontAwesomeIcon icon={Object.values(el)[0].icon} />
+                  <Header.Menu.Title>{Object.keys(el)[0]}</Header.Menu.Title>
+                </>
+               </Link>
               </Header.Menu.Item>
             )
           })}
-        </ul>
+        </Header.Menu.List>
       </Header.Inner>
     </Header.Container>
   )

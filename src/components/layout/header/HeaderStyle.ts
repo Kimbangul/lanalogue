@@ -12,14 +12,44 @@ const Header = {
   Inner: styled.div`
     width: 100%;
     height: 100%;
-    padding: 4rem 0;
+    padding: 12rem 0;
+    display: flex;
   `,
   Menu: {
     List: styled.ul`
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     `,
     Item: styled.li`
-      color: #fff;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      font-size: 2.4rem;
+
+      & > a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        transition: color 0.3s;
+
+        &:hover{
+          color: ${props => props.theme.color.point01};
+        }
+      }
     `,
+    Title: styled.span`
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    `
   }
 }
 
