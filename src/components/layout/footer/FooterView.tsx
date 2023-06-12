@@ -13,7 +13,7 @@ const FooterView = () => {
         <ul>
           <li><FontAwesomeIcon icon={faSearch} /></li>
         </ul>
-        <p>© {moment().format('YYYY')} Kimbangul. All Rights Reserved.</p>
+        <Footer.Copy>© {moment().format('YYYY')} Kimbangul. All Rights Reserved.</Footer.Copy>
       </Footer.Inner>
     </Footer.Container>
   )

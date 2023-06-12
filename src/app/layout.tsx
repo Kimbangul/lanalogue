@@ -1,4 +1,4 @@
-import GlobalStyle from "@/components/common/GlobalStyle";
+import GlobalStyle, {Contents} from "@/components/common/GlobalStyle";
 import ClientProvider from "@/components/common/ClientProvider";
 import FooterView from "@/components/layout/footer/FooterView";
 import HeaderContainer from "@/components/layout/header/HeaderContainer";
@@ -17,7 +17,9 @@ export default function RootLayout({children}: { children: React.ReactNode
       <body>
         <WrapperView>
         <HeaderContainer />
-        {children}
+        <Contents>
+          {children}
+        </Contents>
         <FooterView />
         </WrapperView>
       </body>

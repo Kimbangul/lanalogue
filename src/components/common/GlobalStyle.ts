@@ -1,6 +1,6 @@
 'use client'
 
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import theme from '@/utils/Theme';
 
 const GlobalStyle = createGlobalStyle`
@@ -44,5 +44,9 @@ const GlobalStyle = createGlobalStyle`
 }
 
 `;
+
+export const Contents = styled.section`
+  flex-grow: 1;
+`
 
 export default GlobalStyle;
