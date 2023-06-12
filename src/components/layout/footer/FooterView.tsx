@@ -12,22 +12,22 @@ const FooterView = ({social}: FooterViewPropsType) => {
   return(
     <Footer.Container>
       <Footer.Inner>
-        <ul>
+        <Footer.List>
           {
             social?.map((el, idx) => {
               return(
-                <li key={`social${idx}`}>
+                <Footer.Item key={`social${idx}`}>
                   <Link href={Object.values(el)[0].link}>
                     <>
                       <FontAwesomeIcon icon = {Object.values(el)[0].icon}/>
-                      <span>{Object.keys(el)[0]}</span>
+                      <Footer.MenuTitle>{Object.keys(el)[0]}</Footer.MenuTitle>
                     </>
                   </Link>
-                </li>
+                </Footer.Item>
               )
             })
           }
-        </ul>
+        </Footer.List>
         <Footer.Copy>© {moment().format('YYYY')} Kimbangul. All Rights Reserved.</Footer.Copy>
       </Footer.Inner>
     </Footer.Container>

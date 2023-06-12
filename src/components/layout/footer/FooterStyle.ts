@@ -12,15 +12,31 @@ export const Footer = {
     padding: 4.8rem 4rem;
   `,
   List: styled.ul`
-
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.2rem;
   `,
   Item: styled.li`
+    & > a{
+      font-size: 1.8rem;
+      color: #fff;
+      transition: opacity 0.3s;
+      opacity: 0.5;
 
+      &:hover{
+        opacity: 1;
+      }
+    }
+  `,
+  MenuTitle: styled.span`
+    font-size: 0;
   `,
   Copy: styled.p`
     color: #fff;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: right;
+    margin-top: 0.8rem;
+    opacity: 0.5;
   `,
 }
 
