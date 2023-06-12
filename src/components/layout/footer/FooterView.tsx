@@ -17,7 +17,7 @@ const FooterView = ({social}: FooterViewPropsType) => {
             social?.map((el, idx) => {
               return(
                 <Footer.Item key={`social${idx}`}>
-                  <Link href={Object.values(el)[0].link}>
+                  <Link href={Object.values(el)[0].link} target="_blank">
                     <>
                       <FontAwesomeIcon icon = {Object.values(el)[0].icon}/>
                       <Footer.MenuTitle>{Object.keys(el)[0]}</Footer.MenuTitle>

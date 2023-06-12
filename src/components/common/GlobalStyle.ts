@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
     border: none;
   }
   body{
-    font-family: sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.4rem;
     min-width: 280px;
     background: ${theme.color.bg};
@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
   }
 
 ::-webkit-scrollbar{

@@ -12,7 +12,7 @@ const Header = {
   `,
   Inner: styled.div`
     width: 100%;
-    height: 32rem;
+    height: 40rem;
     display: flex;
     margin: auto 0;
   `,

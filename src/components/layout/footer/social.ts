@@ -4,29 +4,29 @@ import { faBlog, faTv } from "@fortawesome/free-solid-svg-icons";
 
 const social = {
   "soundCloud": {
-    "link": "#",
+    "link": "https://soundcloud.com/lanalogue",
     "icon": faSoundcloud
   },
   "youtube": {
-    "link": "#",
+    "link": "https://www.youtube.com/channel/UCr5fjay4H9a4cnrCcEydIMA",
     "icon": faYoutube
   },
   "instagram": {
-    "link": "#",
+    "link": "https://www.instagram.com/band_lanalogue",
     "icon": faInstagram
   },
   "facebook": {
-    "link": "#",
+    "link": "https://www.facebook.com/Band.Lanalogue",
     "icon": faFacebook
   },
   "naver tv": {
-    "link": "#",
+    "link": "https://tv.naver.com/lanalogue",
     "icon": faTv
   },
-  "blog": {
-    "link": "#",
-    "icon": faBlog
-  },
+  // "blog": {
+  //   "link": "#",
+  //   "icon": faBlog
+  // },
 }
 
 export default social;

@@ -1,9 +1,13 @@
 import { MenuType } from "@/components/layout/header/type";
-import { faIcons,faMusic, faCompactDisc, faBook, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faIcons,faMusic, faCompactDisc, faBook, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 
 const menu : MenuType = {
+  "home": {
+    "link": "/",
+    "icon": faHouse
+  },
   "introduce": {
-    "link": "#",
+    "link": "introduce",
     "icon": faIcons
   },
   "member": {
