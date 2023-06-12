@@ -9,7 +9,7 @@ export const Footer = {
     /* max-width: 1200px; */
     width: 100%;
     margin: 0 auto;
-    padding: 4.8rem 0;
+    padding: 4.8rem 4rem;
   `,
   List: styled.ul`
 
@@ -21,7 +21,6 @@ export const Footer = {
     color: #fff;
     font-size: 1.4rem;
     text-align: right;
-    padding: 0 4rem;
   `,
 }
 
