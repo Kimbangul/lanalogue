@@ -8,12 +8,13 @@ const Header = {
     top: 0;
     left: 0;
     background: #000;
+    display: flex;
   `,
   Inner: styled.div`
     width: 100%;
-    height: 100%;
-    padding: 24rem 0;
+    height: 32rem;
     display: flex;
+    margin: auto 0;
   `,
   Menu: {
     List: styled.ul`
@@ -36,10 +37,12 @@ const Header = {
         justify-content: center;
         align-items: center;
         color: #fff;
-        transition: color 0.3s;
+        transition: color 0.3s, opacity 0.3s;
+        opacity: 0.5;
 
         &:hover{
-          color: ${props => props.theme.color.point01};
+          /* color: ${props => props.theme.color.point01}; */
+          opacity: 1;
 
           & > span{
             visibility: visible;
