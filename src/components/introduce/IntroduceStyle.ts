@@ -11,8 +11,8 @@ const Introduce = {
     font-size: 3.6rem;
   `,
   Text: styled.p`
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: 1.8rem;
+    line-height: 1.6;
     color: #fff;
     margin-top: 2.4rem;
   `,
@@ -21,6 +21,8 @@ const Introduce = {
       width: 100%;
       height: 28rem;
       border: 0.1rem solid #fff;
+      overflow: hidden;
+      object-fit: cover;
     `
   }
 }

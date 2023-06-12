@@ -15,7 +15,7 @@ const menu : MenuType = {
     "icon": faPeopleGroup
   },
   "discography":{
-    "link": "#",
+    "link": "discography",
     "icon": faCompactDisc
   },
   "concert info": {
