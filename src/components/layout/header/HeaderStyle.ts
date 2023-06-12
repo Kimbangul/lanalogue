@@ -12,7 +12,7 @@ const Header = {
   Inner: styled.div`
     width: 100%;
     height: 100%;
-    padding: 12rem 0;
+    padding: 24rem 0;
     display: flex;
   `,
   Menu: {
@@ -40,15 +40,27 @@ const Header = {
 
         &:hover{
           color: ${props => props.theme.color.point01};
+
+          & > span{
+            visibility: visible;
+            left: 130%;
+            opacity: 1;
+            color: #fff;
+          }
         }
       }
     `,
     Title: styled.span`
-      display: none;
+      visibility: hidden;
       position: absolute;
+      opacity: 0;
       top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      left: 125%;
+      transform: translateY(-50%);
+      transition: left 0.3s, opacity 0.3s;
+      font-size: 1.2rem;
+      color: #fff;
+      white-space: nowrap;
     `
   }
 }
