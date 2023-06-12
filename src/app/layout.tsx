@@ -1,6 +1,6 @@
 import GlobalStyle, {Contents} from "@/components/common/GlobalStyle";
 import ClientProvider from "@/components/common/ClientProvider";
-import FooterView from "@/components/layout/footer/FooterView";
+import FooterContainer from "@/components/layout/footer/FooterContainer";
 import HeaderContainer from "@/components/layout/header/HeaderContainer";
 import WrapperView from "@/components/layout/wrapper/WrapperView";
 
@@ -20,7 +20,7 @@ export default function RootLayout({children}: { children: React.ReactNode
         <Contents>
           {children}
         </Contents>
-        <FooterView />
+        <FooterContainer />
         </WrapperView>
       </body>
     </html>
