@@ -4,27 +4,33 @@ import { faHouse, faIcons,faMusic, faCompactDisc, faBook, faPeopleGroup } from "
 const menu : MenuType = {
   "home": {
     "link": "/",
-    "icon": faHouse
+    "icon": faHouse,
+    "title": "home"
   },
   "introduce": {
     "link": "introduce",
-    "icon": faIcons
+    "icon": faIcons,
+    "title": "introduce"
   },
   "member": {
     "link": "#",
-    "icon": faPeopleGroup
+    "icon": faPeopleGroup,
+    "title": "member"
   },
   "discography":{
     "link": "discography",
-    "icon": faCompactDisc
+    "icon": faCompactDisc,
+    "title": "discography"
   },
   "concert info": {
     "link": "#",
-    "icon": faMusic
+    "icon": faMusic,
+    "title": "concert"
   },
   "guestbook": {
     "link": "#",
-    "icon": faBook
+    "icon": faBook,
+    "title": "guestbook"
   }
 }
 

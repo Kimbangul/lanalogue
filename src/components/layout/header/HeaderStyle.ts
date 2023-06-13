@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Header = {
   Container: styled.header`
@@ -22,7 +22,7 @@ const Header = {
       flex-direction: column;
       width: 100%;
     `,
-    Item: styled.li`
+    Item: styled.li<{active: boolean}>`
       flex-grow: 1;
       display: flex;
       justify-content: center;
@@ -39,6 +39,12 @@ const Header = {
         color: #fff;
         transition: color 0.3s, opacity 0.3s;
         opacity: 0.5;
+
+        ${({active}) => active &&
+          css`
+            opacity: 1;
+          `
+        }
 
         &:hover{
           /* color: ${props => props.theme.color.point01}; */
