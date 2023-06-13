@@ -12,10 +12,20 @@ const Discography = {
     margin-bottom: 2.4rem;
   `,
   Item: styled.div`
-    width: 30rem;
-    height: 30rem;
+    max-width: 30rem;
+    aspect-ratio: 1 / 1;
     border: 0.1rem solid #fff;
     margin: 0 auto;
+    transition: width 0.3s, height 0.3s;
+
+    @media (max-width: ${props => props.theme.screenSize.pc}px){
+      max-width: 45rem;
+      width: auto;
+    }
+
+    @media (max-width: ${props => props.theme.screenSize.tb}px){
+      width: 100%;
+    }
   `,
   Text: {
     Container: styled.div`

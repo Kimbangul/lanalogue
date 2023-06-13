@@ -28,10 +28,18 @@ const fontSize = {
   },
 };
 
+const screenSize = {
+  mb: 500,
+  tb: 768,
+  pc: 1080,
+  "pc-l": 1200,
+}
+
 
 const theme = {
   color: {...color},
   fontSize: {...fontSize},
+  screenSize: {...screenSize},
 }
 
 export default theme;
