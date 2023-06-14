@@ -1,6 +1,7 @@
 'use client'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import type { Swiper as SwiperType } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import  type { Swiper as SwiperType } from 'swiper';
+import SwiperInit, { SwiperOptions } from 'swiper';
 import { useEffect, useRef } from 'react';
 
 import theme from '@/utils/Theme';
@@ -9,22 +10,19 @@ import Discography from '@/components/discography/DiscographyStyle';
 import useResize from '@/utils/useResize';
 
 import 'swiper/css';
-import { SwiperOptions } from 'swiper';
 
 export default function DiscographyView() {
   const swiperRef = useRef<SwiperType | null>(null);
-  const swiper = useSwiper();
   const size = useResize();
 
   useEffect(()=>{
     if (!size.width) return;
-    console.log(swiperRef);
+
     if(size.width < theme.screenSize.tb) {
        swiperRef.current?.destroy();
     }
-    else if (size.width > theme.screenSize.tb && swiperRef.current?.destroyed){
-      // swiper.init();
-      console.log(swiperRef.current);
+    else if (size.width > theme.screenSize.tb && swiperRef .current?.destroyed){
+      swiperRef.current = new SwiperInit('.swiper', swiperOption);
     }
   }, [size]);
 
@@ -45,7 +43,7 @@ export default function DiscographyView() {
         slidesPerView:4
       }
     },
-
+    
   }
 
   return (
