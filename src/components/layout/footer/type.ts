@@ -1,7 +1,9 @@
-import { MenuType } from "@/components/layout/header/type";
-
-export interface SocialType extends MenuType {
-
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
+export interface SocialType {
+  [key:string]: {
+    link: string,
+    icon: IconDefinition
+  }
 }
 
 export interface FooterViewPropsType {

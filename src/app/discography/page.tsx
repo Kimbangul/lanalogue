@@ -1,7 +1,7 @@
 'use client'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
 import  type { Swiper as SwiperType } from 'swiper';
-import SwiperInit, { SwiperOptions } from 'swiper';
+import SwiperInit from 'swiper';
 import { useEffect, useRef } from 'react';
 
 import theme from '@/utils/Theme';
@@ -15,19 +15,7 @@ export default function DiscographyView() {
   const swiperRef = useRef<SwiperType | null>(null);
   const size = useResize();
 
-  useEffect(()=>{
-    if (!size.width) return;
-
-    if(size.width < theme.screenSize.tb) {
-       swiperRef.current?.destroy();
-    }
-    else if (size.width > theme.screenSize.tb && swiperRef .current?.destroyed){
-      swiperRef.current = new SwiperInit('.swiper', swiperOption);
-    }
-  }, [size]);
-
-
-  const swiperOption : SwiperOptions = {
+  const swiperOption : SwiperProps = {
     spaceBetween: 50,
     slidesPerView:1,
     centeredSlides: true,
@@ -43,25 +31,31 @@ export default function DiscographyView() {
         slidesPerView:4
       }
     },
-    
+    onInit:(swiper)=> {
+      swiperRef.current = swiper}
   }
+
+  useEffect(()=>{
+    if (!size.width) return;
+
+    if(size.width < theme.screenSize.tb) {
+       swiperRef.current?.destroy(false, true);
+    }
+    else if (size.width > theme.screenSize.tb && swiperRef .current?.destroyed){
+      swiperRef.current = new SwiperInit('.swiper', swiperOption);
+    }
+  }, [size]);
 
   return (
     <>
     <Discography.Title>Discography</Discography.Title>
     <Discography.Container>
-      <Swiper 
-      {...swiperOption}     
-      onInit={(swiper)=> {
-      swiperRef.current = swiper}
-    }>
+      <Swiper {...swiperOption}>
       {
             info.map((el, idx) => {
               return  (
                 <SwiperSlide key={`album${idx}`}>
-                  <Discography.Item>
-                   
-                  </Discography.Item>
+                  <Discography.Item />
                   <Discography.Text.Container>
                     <Discography.Text.Title>{el.title}</Discography.Text.Title>
                     <Discography.Text.Release>{el.release}</Discography.Text.Release>
