@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PageTitle } from "@/components/common/GlobalStyle";
 
 const Discography = {
   Container: styled.div`
@@ -6,9 +7,7 @@ const Discography = {
     display: flex;
     align-items: center;
   `,
-  Title: styled.h1`
-    color: #fff;
-    font-size: 2.4rem;
+  Title: styled(PageTitle)`
     margin-bottom: 2.4rem;
   `,
   Item: styled.div`

@@ -49,4 +49,9 @@ export const Contents = styled.section`
   flex-grow: 1;
 `
 
+export const PageTitle = styled.h1`
+    color: #fff;
+    font-size: 2.4rem;
+`
+
 export default GlobalStyle;
