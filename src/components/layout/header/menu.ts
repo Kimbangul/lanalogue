@@ -28,7 +28,7 @@ const menu : MenuType = {
     "title": "concert"
   },
   "guestbook": {
-    "link": "#",
+    "link": "guestbook",
     "icon": faBook,
     "title": "guestbook"
   }

@@ -22,13 +22,16 @@ export default function DiscographyView() {
     loop: true,
     breakpoints:{
       [theme.screenSize.tb]:{
-        slidesPerView:2             
+        slidesPerView:2,
+        centeredSlides: false,          
       },
       [theme.screenSize.pc]:{
-        slidesPerView:3             
+        slidesPerView:3,      
+        centeredSlides: true,       
       },
       [theme.screenSize["pc-l"]]:{
-        slidesPerView:4
+        slidesPerView:4,
+        centeredSlides: true,
       }
     },
     onInit:(swiper)=> {
@@ -38,10 +41,10 @@ export default function DiscographyView() {
   useEffect(()=>{
     if (!size.width) return;
 
-    if(size.width < theme.screenSize.tb) {
-       swiperRef.current?.destroy(false, true);
+    if(size.width < theme.screenSize.mb) {
+       swiperRef.current?.destroy(true, true);
     }
-    else if (size.width > theme.screenSize.tb && swiperRef .current?.destroyed){
+    else if (size.width >= theme.screenSize.mb && swiperRef .current?.destroyed){
       swiperRef.current = new SwiperInit('.swiper', swiperOption);
     }
   }, [size]);
@@ -68,4 +71,5 @@ export default function DiscographyView() {
     </Discography.Container>
     </>
   )
+  
 }

@@ -5,6 +5,8 @@ const Introduce = {
     padding: 0 4rem;
     position: relative;
     top: -2.8rem;
+    max-width: ${props => props.theme.screenSize.pc}px;
+    margin: 0 auto;
   `,
   Title: styled.h1`
     color: #fff;
