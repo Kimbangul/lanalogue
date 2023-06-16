@@ -2,7 +2,7 @@
 
 import GuestbookItem from "@/components/guestbook/GuestbookItem";
 import Guestbook from "@/components/guestbook/GuestbookStyle";
-import Pagination from "@/components/common/Pagination";
+import Pagination from "@/components/common/Pagination/Pagination";
 
 
 export default function GuestbookView() {
