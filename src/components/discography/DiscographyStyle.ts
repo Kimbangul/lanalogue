@@ -6,6 +6,20 @@ const Discography = {
     height: 100%;
     display: flex;
     align-items: center;
+
+    @media(max-width: ${props => props.theme.screenSize.tb}px){
+      .swiper-wrapper{
+        display: block;
+      }
+
+      .swiper-slide{
+        margin-top: 3.2rem;
+
+        &:first-child{
+          margin-top: 0;
+        }
+      }
+    }
   `,
   Title: styled(PageTitle)`
     margin-bottom: 2.4rem;
