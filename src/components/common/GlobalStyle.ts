@@ -50,7 +50,14 @@ const GlobalStyle = createGlobalStyle`
 
 export const Contents = styled.section`
   flex-grow: 1;
-`
+`;
+
+export const Button = styled.button`
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background: #ffffff20;
+  color: ${props => props.theme.color.white01};
+`;
 
 export const PageTitle = styled.h1`
     color: ${props => props.theme.color.white01};

@@ -11,8 +11,8 @@ const GuestbookItem =() => {
         <Guestbook.Item.Time>{moment().fromNow()}</Guestbook.Item.Time>
        </Guestbook.Item.TextContainer>
        <Guestbook.Control.Container>
-        <button>수정</button>
-        <button>삭제</button>
+        <Guestbook.Control.Item>수정</Guestbook.Control.Item>
+        <Guestbook.Control.Item>삭제</Guestbook.Control.Item>
       </Guestbook.Control.Container>
       </Guestbook.Item.InfoContainer>
       <Guestbook.Item.Contents>

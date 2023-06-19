@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageTitle } from "@/components/common/GlobalStyle";
+import { PageTitle, Button } from "@/components/common/GlobalStyle";
 
 const Guestbook = {
   Container: styled.div`
@@ -49,7 +49,10 @@ const Guestbook = {
     Container: styled.div`
       display: flex;
       gap: 0.8rem;
-    `
+    `,
+    Item: styled(Button)`
+    
+    `,
   }
 }
 
