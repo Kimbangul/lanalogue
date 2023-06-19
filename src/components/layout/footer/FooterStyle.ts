@@ -19,7 +19,7 @@ export const Footer = {
   Item: styled.li`
     & > a{
       font-size: 1.8rem;
-      color: #fff;
+      color: ${props => props.theme.color.white01};
       transition: opacity 0.3s;
       opacity: 0.5;
 
@@ -32,7 +32,7 @@ export const Footer = {
     font-size: 0;
   `,
   Copy: styled.p`
-    color: #fff;
+    color: ${props => props.theme.color.white01};
     font-size: 1.2rem;
     text-align: right;
     margin-top: 0.8rem;

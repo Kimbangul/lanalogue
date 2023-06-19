@@ -27,7 +27,7 @@ const Discography = {
   Item: styled.div`
     max-width: 30rem;
     aspect-ratio: 1 / 1;
-    border: 0.1rem solid #fff;
+    border: 0.1rem solid ${props => props.theme.color.white01};
     margin: 0 auto;
     transition: width 0.3s, height 0.3s;
 
@@ -47,11 +47,11 @@ const Discography = {
       margin-top: 1.2rem;
     `,
     Title: styled.h2`
-      color: #fff;
+      color: ${props => props.theme.color.white01};
       font-size: 1.8rem;
     `,
     Release: styled.span`
-      color: #fff;
+      color: ${props => props.theme.color.white01};
       font-size: 1.4rem;
       margin-top: 0.8rem;
       font-weight: 400;

@@ -53,7 +53,7 @@ export const Contents = styled.section`
 `
 
 export const PageTitle = styled.h1`
-    color: #fff;
+    color: ${props => props.theme.color.white01};
     font-size: 2.4rem;
 `
 

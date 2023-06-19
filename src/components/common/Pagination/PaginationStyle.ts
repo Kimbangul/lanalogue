@@ -13,7 +13,7 @@ const PaginationStyle = {
     background: #ffffff10;
     transition: background 0.3s;
     border-radius: 0.4rem;
-    color: #fff;
+    color: ${props => props.theme.color.white01};
     box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.2);
 
     &:hover{

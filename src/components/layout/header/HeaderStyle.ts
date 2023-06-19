@@ -36,7 +36,7 @@ const Header = {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        color: ${props => props.theme.color.white01};
         transition: color 0.3s, opacity 0.3s;
         opacity: 0.5;
 
@@ -54,7 +54,7 @@ const Header = {
             visibility: visible;
             left: 130%;
             opacity: 1;
-            color: #fff;
+            color: ${props => props.theme.color.white01};
           }
         }
       }
@@ -68,7 +68,7 @@ const Header = {
       transform: translateY(-50%);
       transition: left 0.3s, opacity 0.3s;
       font-size: 1.2rem;
-      color: #fff;
+      color: ${props => props.theme.color.white01};
       white-space: nowrap;
     `
   }

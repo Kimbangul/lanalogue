@@ -7,6 +7,12 @@ const color = {
   text02: '#555',
   text01: '#666', 
   point01: '#ff7675',
+  white01: '#fff',
+  white02: '#f2f2f2',
+  white03: '#e0e0e0',
+  white04: '#d0d0d0',
+  white05: '#c0c0c0',
+  white06: '#b0b0b0',
 }
 
 const fontSize = {
