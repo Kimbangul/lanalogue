@@ -13,7 +13,7 @@ export default function GuestbookView() {
         <ul>
          <GuestbookItem />
         </ul>
-        <Pagination />
+        <Pagination currentPage={1} lastPage={5}/>
      </Guestbook.Container>
     </>
   )

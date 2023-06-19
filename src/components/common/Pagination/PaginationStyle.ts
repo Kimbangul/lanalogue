@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 
 const PaginationStyle = {
   Container: styled.div`
@@ -6,19 +6,23 @@ const PaginationStyle = {
     align-items: center;
     gap: 0 0.8rem;
   `,
-  Button: styled.button`
+  Button: styled.button<{active: boolean}>`
     cursor: pointer;
-    width: 2.4rem;
-    height: 2.4rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    background: #ffffff20;
+    width: 3.6rem;
+    height: 3.6rem;
+    background: #ffffff10;
     transition: background 0.3s;
     border-radius: 0.4rem;
     color: #fff;
     box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.2);
 
     &:hover{
-      background: #ffffff40;
+      background: #ffffff20;
+    }
+
+    ${
+      props => props.active &&
+      css`background: #ffffff40;`
     }
   `,
 }
