@@ -2,6 +2,7 @@
 
 import GuestbookItem from "@/components/guestbook/GuestbookItem";
 import Guestbook from "@/components/guestbook/GuestbookStyle";
+import GuestbookInput from "@/components/guestbook/GuestbookInput";
 import Pagination from "@/components/common/Pagination/Pagination";
 
 
@@ -10,6 +11,7 @@ export default function GuestbookView() {
     <>
      <Guestbook.Container>
       <Guestbook.Title>Guestbook</Guestbook.Title>
+        <GuestbookInput />
         <Guestbook.List>
          <GuestbookItem idx={1} nickname="nick1" regDate="2023-06-20 19:00:00" content="sample"/>
          <GuestbookItem idx={2} nickname="nick2" regDate="2023-06-15 19:00:00" content="sample"/>

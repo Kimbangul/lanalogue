@@ -68,6 +68,14 @@ export const Button = styled.button`
   color: ${props => props.theme.color.white01};
 `;
 
+export const Input = styled.input`
+  border: 0.1rem solid ${props => props.theme.color.white06}60;
+  background: transparent;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.6rem;
+  color: ${props => props.theme.color.white01};
+`;
+
 export const PageTitle = styled.h1`
     color: ${props => props.theme.color.white01};
     font-size: 2.4rem;

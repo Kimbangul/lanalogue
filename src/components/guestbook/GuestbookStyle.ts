@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PageTitle, Button } from "@/components/common/GlobalStyle";
+import { PageTitle, Button, Input } from "@/components/common/GlobalStyle";
 
 const Guestbook = {
   Container: styled.div`
@@ -72,6 +72,29 @@ const Guestbook = {
         justify-content: center;
       }
     `,
+  },
+  Input: {
+    Container: styled.form`
+      margin-top: 4.8rem;
+    `,
+    InfoContainer: styled.div`
+      display: flex;
+      gap: 0.8rem;
+    `,
+    Input: styled(Input)`
+      background: ${props => props.theme.color.white01}fff10;
+      border: none;
+      font-size: 1.6rem;
+    `,
+    Textarea: styled(Input)`
+      resize: none;
+      border: none;
+      background: ${props => props.theme.color.white01}fff10;
+      width: 100%;
+      margin-top: 1.2rem;
+      font-size: 1.6rem;
+      height: 16rem;
+    `
   }
 }
 
