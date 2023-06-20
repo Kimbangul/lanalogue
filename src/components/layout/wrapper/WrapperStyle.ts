@@ -8,7 +8,7 @@ export const Wrapper = {
     height: 100vh;
     transition: padding 0.3s;
 
-    @media(max-width: ${props => props.theme.screenSize.pc}px){
+    @media(max-width: ${props => props.theme.screenSize["pc-l"]}px){
         padding: 0 4rem 0 10rem;
     }
 
