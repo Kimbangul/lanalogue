@@ -9,12 +9,20 @@ const Guestbook = {
   Title: styled(PageTitle)`
 
   `,
+  List: styled.ul`
+    margin-top: 4.8rem;
+  `,
   Item: {
     Container: styled.li`
     margin-top: 2.4rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 0.1rem solid ${props => props.theme.color.white06}10;
 
     &:first-child{
       margin-top: 0;
+    }
+    &:last-child{
+      border-bottom: none;
     }
    `,
     Title: styled.h2`
@@ -51,7 +59,14 @@ const Guestbook = {
       gap: 0.8rem;
     `,
     Item: styled(Button)`
-    
+
+    `,
+  },
+  Pagination:{
+    Container: styled.div`
+      display: flex;
+      justify-content: end;
+      margin-top: 4.8rem;
     `,
   }
 }

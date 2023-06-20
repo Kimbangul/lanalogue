@@ -2,7 +2,7 @@ import styled, {css} from "styled-components"
 
 const PaginationStyle = {
   Container: styled.div`
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 0 0.8rem;
   `,

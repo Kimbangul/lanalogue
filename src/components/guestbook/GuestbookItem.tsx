@@ -1,7 +1,7 @@
 import moment from "moment";
 import Guestbook from "@/components/guestbook/GuestbookStyle";
 
-const GuestbookItem =() => {
+const GuestbookItem = () => {
   return(
     <Guestbook.Item.Container>
       {/* <Guestbook.Item.Title>방명록 타이틀</Guestbook.Item.Title> */}

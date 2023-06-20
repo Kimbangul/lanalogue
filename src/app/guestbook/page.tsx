@@ -10,10 +10,14 @@ export default function GuestbookView() {
     <>
      <Guestbook.Container>
       <Guestbook.Title>Guestbook</Guestbook.Title>
-        <ul>
+        <Guestbook.List>
          <GuestbookItem />
-        </ul>
-        <Pagination currentPage={1} lastPage={5}/>
+         <GuestbookItem />
+         <GuestbookItem />
+        </Guestbook.List>
+        <Guestbook.Pagination.Container>
+          <Pagination currentPage={1} lastPage={5}/>
+        </Guestbook.Pagination.Container>
      </Guestbook.Container>
     </>
   )
