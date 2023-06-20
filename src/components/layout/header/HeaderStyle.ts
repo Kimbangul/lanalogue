@@ -5,22 +5,37 @@ const Header = {
     width: 6rem;
     height: 100%;
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     background: #000;
     display: flex;
+
+    @media(max-width: ${props => props.theme.screenSize.tb}px){
+        width: 100%;
+        height: 4.2rem;
+    }
+
   `,
   Inner: styled.div`
     width: 100%;
     height: 40rem;
     display: flex;
     margin: auto 0;
+
+    @media(max-width: ${props => props.theme.screenSize.tb}px){
+      height: 100%;
+    }
   `,
   Menu: {
     List: styled.ul`
       display: flex;
       flex-direction: column;
       width: 100%;
+
+      @media(max-width: ${props => props.theme.screenSize.tb}px){
+       flex-direction: row;
+      }
     `,
     Item: styled.li<{active: boolean}>`
       flex-grow: 1;
@@ -55,6 +70,11 @@ const Header = {
             left: 130%;
             opacity: 1;
             color: ${props => props.theme.color.white01};
+
+            @media(max-width: ${props => props.theme.screenSize.tb}px){
+              opacity: 0;
+              display: none;
+            }
           }
         }
       }

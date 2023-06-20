@@ -6,6 +6,15 @@ import theme from '@/utils/Theme';
 const GlobalStyle = createGlobalStyle`
  html{
   font-size: 62.5%; 
+  transition: font-size 0.3s;
+
+  @media(max-width: ${theme.screenSize.tb}px){
+        font-size: 58%;
+  }
+
+    @media(max-width: ${theme.screenSize.mb}px){
+        font-size: 50%;
+  }
  }
  *{
     margin: 0;

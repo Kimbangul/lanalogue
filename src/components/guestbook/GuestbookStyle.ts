@@ -67,6 +67,10 @@ const Guestbook = {
       display: flex;
       justify-content: end;
       margin-top: 4.8rem;
+
+      @media(max-width:  ${props => props.theme.screenSize.tb}px){
+        justify-content: center;
+      }
     `,
   }
 }
