@@ -66,12 +66,13 @@ export const Button = styled.button`
   border-radius: 0.4rem;
   background: #ffffff20;
   color: ${props => props.theme.color.white01};
+  cursor: pointer;
 `;
 
 export const Input = styled.input`
   border: 0.1rem solid ${props => props.theme.color.white06}60;
   background: transparent;
-  padding: 0.8rem 1.2rem;
+  padding: 1.2rem;
   border-radius: 0.6rem;
   color: ${props => props.theme.color.white01};
 `;

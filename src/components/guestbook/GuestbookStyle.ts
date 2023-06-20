@@ -79,12 +79,16 @@ const Guestbook = {
     `,
     InfoContainer: styled.div`
       display: flex;
-      gap: 0.8rem;
+      gap: 1.2rem;
     `,
     Input: styled(Input)`
       background: ${props => props.theme.color.white01}fff10;
       border: none;
       font-size: 1.6rem;
+
+      @media (max-width: ${props => props.theme.screenSize.tb}px){
+        width: 100%;
+      }
     `,
     Textarea: styled(Input)`
       resize: none;
@@ -94,7 +98,16 @@ const Guestbook = {
       margin-top: 1.2rem;
       font-size: 1.6rem;
       height: 16rem;
-    `
+      padding: 1.2rem;
+      font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+    `,
+    Button: styled(Button)`
+    /* TODO 색상 변경 */
+      font-size: 1.6rem;
+      margin: 1.2rem 0 0 auto;
+      padding: 0.8rem 2.4rem;
+      display: block;
+    `,
   }
 }
 
