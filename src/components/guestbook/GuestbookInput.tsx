@@ -21,11 +21,13 @@ const GuestbookInput = () => {
       <Guestbook.Input.InfoContainer>
         <Guestbook.Input.Input 
           type="email"  
+          placeholder="example@email.com"
           onChange={email.onChangeInput}
           value={email.inputVal}
         />
         <Guestbook.Input.Input
          type="password" 
+         placeholder="password"
          onChange={password.onChangeInput}
          value={password.inputVal}
         />

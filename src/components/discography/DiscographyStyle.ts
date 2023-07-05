@@ -7,7 +7,7 @@ const Discography = {
     display: flex;
     align-items: center;
 
-    @media(max-width: ${props => props.theme.screenSize.tb}px){
+    @media(max-width: ${props => props.theme.screenSize.mb}px){
       .swiper-wrapper{
         display: block;
       }

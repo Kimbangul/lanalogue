@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { PageTitle, Button, Input } from "@/components/common/GlobalStyle";
+import { PageTitle, Button, Input, InnerContent } from "@/components/common/GlobalStyle";
 
 const Guestbook = {
-  Container: styled.div`
+  Container: styled(InnerContent)`
     max-width: ${props => props.theme.screenSize.pc}px;
     margin: 0 auto;
   `,
@@ -80,6 +80,10 @@ const Guestbook = {
     InfoContainer: styled.div`
       display: flex;
       gap: 1.2rem;
+
+      @media (max-width: ${props => props.theme.screenSize["tb"]}px) {
+        flex-direction: column;
+      }
     `,
     Input: styled(Input)`
       background: ${props => props.theme.color.white01}fff10;

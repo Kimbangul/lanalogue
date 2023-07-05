@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { InnerContent } from "@/components/common/GlobalStyle";
 
 const Introduce = {
-  Container: styled.div`
+  Container: styled(InnerContent)`
     padding: 0 4rem;
     position: relative;
     top: -2.8rem;

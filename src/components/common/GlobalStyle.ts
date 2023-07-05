@@ -82,4 +82,13 @@ export const PageTitle = styled.h1`
     font-size: 2.4rem;
 `
 
+export const InnerContent = styled.div`
+  padding: 0 4rem;
+  transition: padding 0.3s;
+
+  @media(max-width: ${props => props.theme.screenSize["pc-l"]}px){
+        padding: 0 3rem;
+  }
+`
+
 export default GlobalStyle;
