@@ -1,8 +1,11 @@
+import Particle from "@/components/tsparticle/Particle"
 
 export default function Home() {
   return (
     <section>
-      hello world!
+      <div>
+        <Particle />
+      </div>
     </section>
   )
 }
