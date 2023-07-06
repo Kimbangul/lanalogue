@@ -3,7 +3,7 @@ import type { ISourceOptions } from "tsparticles-engine";
 const config : ISourceOptions = {
   background: {
       color: {
-          value: "#0d47a1",
+          value: "transparent",
       },
   },
   fpsLimit: 120,
@@ -49,8 +49,8 @@ const config : ISourceOptions = {
           outModes: {
               default: "bounce",
           },
-          random: false,
-          speed: 6,
+          random: true,
+          speed: 1,
           straight: false,
       },
       number: {
