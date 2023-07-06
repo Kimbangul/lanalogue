@@ -1,12 +1,11 @@
+'use client';
 import ThreeView from "@/components/three/Three";
+import Main from "@/components/main/MainStyle";
 
 export default function Home() {
   return (
-    <section>
-     
-      <div>
+      <Main.Inner>
         <ThreeView />
-      </div>
-    </section>
+      </Main.Inner>
   )
 }
