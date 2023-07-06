@@ -1,10 +1,11 @@
-import Particle from "@/components/tsparticle/Particle"
+import ThreeView from "@/components/three/Three";
 
 export default function Home() {
   return (
     <section>
+     
       <div>
-        <Particle />
+        <ThreeView />
       </div>
     </section>
   )
