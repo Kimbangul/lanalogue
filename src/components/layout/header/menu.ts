@@ -23,7 +23,7 @@ const menu : MenuType = {
     "title": "discography"
   },
   "concert info": {
-    "link": "#",
+    "link": "concert",
     "icon": faMusic,
     "title": "concert"
   },
