@@ -1,19 +1,20 @@
 'use client'
-import moment from "moment";
+import { Concert } from "@/components/concert/ConcertStyle";
+import ConcertItem from "@/components/concert/ConcertItem";
 
 export default function ConcertView() {
 
 
   return (
     <>
-      <h1>Concert Info</h1>
-      <ul>
-        <li>
-          <h2>title</h2>
-          <p>context</p>
-          <span>{moment().format('YYYY-MM-DD')}</span>
-        </li>
-      </ul>
+     <Concert.Container>
+      <Concert.Title>Concert Info</Concert.Title>
+        <Concert.List>
+         <ConcertItem />
+         <ConcertItem />
+         <ConcertItem />
+        </Concert.List> 
+     </Concert.Container>
     </>
   )
   
