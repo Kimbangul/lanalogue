@@ -20,18 +20,32 @@ export const Concert = {
     Inner: styled.div`
       display: flex;
       gap: 2.4rem;
+      
+      @media (max-width: ${props => props.theme.screenSize.tb}px){
+        display: block;
+      }
     `,
     TextBox: styled.div`
       width: 100%;
       display: flex;
       flex-direction: column;
       padding-top: 0.8rem;
+
+      @media (max-width: ${props => props.theme.screenSize.tb}px){
+        padding-top: 0;
+      }
     `,
     Img: styled.div`
       width: 24rem;
       border: 0.1rem solid #fff;
       aspect-ratio: 1 / 0.7;
       flex-shrink: 0;
+      transition: width 0.3s;
+
+      @media (max-width: ${props => props.theme.screenSize.tb}px){
+        width: 100%;
+        margin-bottom: 1.6rem;
+      }
     `,
     Title: styled(Guestbook.Item.Title)`
     `,
