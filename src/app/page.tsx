@@ -5,7 +5,9 @@ import Main from "@/components/main/MainStyle";
 export default function Home() {
   return (
       <Main.Inner>
-        <ThreeView />
+        <Main.ThreeContainer>
+          <ThreeView />
+        </Main.ThreeContainer>
       </Main.Inner>
   )
 }
