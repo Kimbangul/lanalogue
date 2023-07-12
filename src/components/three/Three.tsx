@@ -1,10 +1,10 @@
 import * as THREE from 'three';
 import { Canvas, Vector3, useFrame, useThree, useLoader } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Clone } from '@react-three/drei';
+import { OrbitControls, useGLTF, Clone, PerspectiveCamera } from '@react-three/drei';
 
 const ThreeObj = () => {
   const {scene} = useGLTF('/scene.gltf');
-  return <Clone object={scene} castShadow />
+  return <primitive object={scene} castShadow emissive={'#fff'} emissiveIntensity={2}/>
 }
 
 const ThreeView = () => {
@@ -25,13 +25,14 @@ const ThreeView = () => {
           position={[0, 0, 0]}
           castShadow
         />
+        <PerspectiveCamera />
         <mesh >
-          <ambientLight intensity={0.7} color='#ffdfa5' position={[-10,0,10]}/>
-          <ambientLight intensity={0.7} color='#a6ffe9' position={[10,0,10]}/>
-          <pointLight intensity={0.5} color='#fff' position={[0,0,0]}/>
-          <directionalLight intensity={1} position={[0,0,100]}/>
+          <ambientLight intensity={0.3} color='#ffdfa5' position={[-10,0,10]}/>
+          <ambientLight intensity={0.2} color='#a6ffe9' position={[10,0,10]}/>
+          <pointLight intensity={5} color='#ffdfa5' position={[0,0,0]}/>
+          <directionalLight intensity={3} position={[0,0,100]}/>
           <ThreeObj />
-          <meshStandardMaterial emissive={[0.5, 0.5, 0.5]} color={[255, 255, 255]} />
+          <meshStandardMaterial emissive={'#fff'} emissiveIntensity={5} />
         </mesh>
       </group>
     </Canvas>
