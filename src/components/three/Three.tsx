@@ -6,7 +6,7 @@ import { Vector3 } from 'three';
 
 const ThreeObj = () => {
   const {scene} = useGLTF('/scene.gltf');
-  return <primitive object={scene} castShadow emissive={new THREE.Color('lime')} emissiveIntensity={2}/>
+  return <primitive object={scene} castShadow />
 }
 
 function Rig() {
@@ -27,21 +27,22 @@ const ThreeView = () => {
       <group>
         <OrbitControls 
           autoRotate={true} 
+          
           enableZoom={true}
           autoRotateSpeed={0.2}
           rotateSpeed={0.4}
-          // rotation={[0,0,0]}
         />
-        <ambientLight intensity={0.3} color='#ffdfa5' position={[-10,0,10]}/>
-        <ambientLight intensity={0.2} color='#a6ffe9' position={[10,0,10]}/>
-        <pointLight intensity={0.2} color='#ffdfa5' position={[0,0,0]}/>
-        <directionalLight intensity={1} position={[0,0,100]}/>
+        {/* <ambientLight intensity={0.3} color='#ffdfa5' position={[-10,0,10]}/>
+        <ambientLight intensity={0.2} color='#a6ffe9' position={[10,0,10]}/> */}
+        <pointLight intensity={0.2} color='#ffdfa5' position={[0,30,0]}/>
+        {/* <directionalLight intensity={1} position={[0,0,100]}/> */}
         <PerspectiveCamera />
         <mesh ref={ref}>
           <ThreeObj />
           <meshStandardMaterial  />
         </mesh>
-        <Rig />
+        <axesHelper args={[5]} />
+        {/* <Rig /> */}
       </group>
     </Canvas>
   )

@@ -1,76 +1,85 @@
-import type { ISourceOptions } from "tsparticles-engine";
+import type { ISourceOptions, Engine } from "tsparticles-engine";
+import { loadFireflyPreset } from "tsparticles-preset-firefly";
+
+export const customInit = async (engine: Engine): Promise<void> => {
+    await loadFireflyPreset(engine);
+}
 
 const config : ISourceOptions = {
-  background: {
-      color: {
-          value: "transparent",
+    // "particles":{
+	// 	"number":{
+	// 		"value":80,
+	// 		"density":{
+	// 			"enable":true,
+	// 			"value_area":800
+	// 		}
+	// 	},
+	// 	"color":{
+	// 		"value":"#ffffff"
+	// 	},
+	// 	"shape":{
+	// 		"type":"circle",
+	// 		"stroke":{
+	// 			"width":0
+	// 		},
+	// 		},
+	// 	"opacity":{
+	// 		"value":1,
+	// 		"random":true,
+	// 		"anim":{
+	// 			"enable":true,
+	// 			"speed":3,
+	// 			"opacity_min":0,
+	// 			"sync":false
+	// 		}
+	// 	},
+	// 	"size":{
+	// 		"value":2,
+	// 		"random":true,
+	// 		"anim":{
+	// 			"enable":false,
+	// 			"speed":4,
+	// 			"size_min":0.3,
+	// 			"sync":false
+	// 		}
+	// 	},
+	// 	"line_linked":{
+	// 		"enable":false,
+	// 	},
+	// 	"move":{
+	// 		"enable":true,
+	// 		"speed":1,
+	// 	"direction":"right",
+	// 	"random":true,
+	// 	"straight":true,
+	// 		"out_mode":"out",
+	// 		"bounce":false,
+	// 		"attract":{
+	// 			"enable":true,
+	// 			"rotateX":300,
+	// 			"rotateY":600
+	// 		}
+	// 	}
+	// },
+	// "interactivity":{
+	// 	"detect_on":"canvas",
+	// 	"events":{
+	// 		"onhover":{
+	// 			"enable":false,
+	// 		},
+	// 		"onclick":{
+	// 			"enable":false,
+	// 		},
+	// 		"resize":true
+	// 	}
+	// },
+	// "retina_detect":true
+    particles: {
+        shape: {
+          type: "square", // starting from v2, this require the square shape script
+        },
       },
-  },
-  fpsLimit: 120,
-  interactivity: {
-      events: {
-          onClick: {
-              enable: true,
-              mode: "push",
-          },
-          onHover: {
-              enable: true,
-              mode: "repulse",
-          },
-          resize: true,
-      },
-      modes: {
-          push: {
-              quantity: 4,
-          },
-          repulse: {
-              distance: 200,
-              duration: 0.4,
-          },
-      },
-  },
-  particles: {
-      color: {
-          value: "#ffffff",
-      },
-      links: {
-          color: "#ffffff",
-          distance: 150,
-          enable: true,
-          opacity: 0.5,
-          width: 1,
-      },
-      collisions: {
-          enable: true,
-      },
-      move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-              default: "bounce",
-          },
-          random: true,
-          speed: 1,
-          straight: false,
-      },
-      number: {
-          density: {
-              enable: true,
-              area: 800,
-          },
-          value: 80,
-      },
-      opacity: {
-          value: 0.5,
-      },
-      shape: {
-          type: "circle",
-      },
-      size: {
-          value: { min: 1, max: 5 },
-      },
-  },
-  detectRetina: true,
+      preset: "firefly",
 }
 
 export default config;
